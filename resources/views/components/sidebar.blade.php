@@ -16,11 +16,6 @@
         </a>
 
         <!-- Estudos (NOVO) -->
-        <a href="{{ route('study') }}" class="sidebar-link">
-             <div class="sidebar-icon"
-                    style="background-image: url('img/caderno.png');">
-            </div>
-        </a>
-
+        
     </div>
 </div>
