@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+    .sidebar {
+    width: 120px;
+    background: #000;
+    height: 100vh;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    }
+
+    .sidebar-link {
+        text-decoration: none;
+    }
+
+    .sidebar-icon {
+        width: 70px;
+        height: 70px;
+        margin: 30px 0;
+        border-radius: 14px;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    /* Hover */
+    .sidebar-icon:hover {
+        transform: scale(1.10);
+        box-shadow: 0 0 18px rgba(0, 255, 128, 0.45);
+    }
+
+    /* Clique */
+    .sidebar-icon:active {
+        transform: scale(0.95);
+    }
+
+    
+
+/* Área principal */
+.container {
+    flex: 1;
+    padding: 20px;
+    margin-top: 90px;
+}
+
+/* Bloco compromisso */
+.compromisso {
+    border: 1px solid #444;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.titulo {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.data {
+    opacity: 0.75;
+    font-size: 0.9rem;
+}
+
+.btn-salvar, .btn-excluir {
+    width: 120px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-salvar {
+    background: #00ff80;
+    color: #000;
+}
+
+.btn-salvar:hover {
+    background: #00d96c;
+}
+
+.btn-excluir {
+    background: #ff4d4d;
+    color: #000;
+}
+
+.btn-excluir:hover {
+    background: #d93636;
+}
+
+/* seta */
+.seta {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.compromisso.aberto .seta {
+    transform: rotate(180deg);
+}
+
+/* Conteúdo colapsável */
+.conteudo {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.25s ease;
+    margin-top: 10px;
+}
+
+.compromisso.aberto .conteudo {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Botão "+" */
+.add-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #333;
+    transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.18s ease;
+}
+
+.add-button:hover {
+    background: #222;
+    box-shadow: 0 0 25px rgba(0,0,0,0.55);
+    transform: scale(1.08);
+}
+
+.add-button:active {
+    transform: scale(0.92);
+    box-shadow: 0 0 15px rgba(0,0,0,0.35);
+}
+
+/* Inputs */
+input, textarea {
+    width: 95%;
+    max-width: 500px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background: #111;
+    color: #fff;
+    margin-top: 4px;
+    transition: 0.2s;
+    display: block;
+}
+
+input:hover, textarea:hover {
+    border-color: #888;
+    background: #151515;
+}
+
+input:focus, textarea:focus {
+    border-color: #00ff80;
+    outline: none;
+}
+
+label {
+    font-size: 0.9rem;
+}
+
+.linha {
+    margin-bottom: 14px;
+}
+
+/* Checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}

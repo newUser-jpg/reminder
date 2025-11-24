@@ -1,0 +1,220 @@
+:root{
+  --bg:#000;
+  --card:#111;
+  --accent:#00ff80;
+  --muted:#aaa;
+}
+html,body{height:100%}
+body {
+    display: flex;
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* centralizar somente o conteúdo principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container */
+.timer-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:24px;
+}
+
+/* Círculo */
+.circle{
+  width:260px;
+  height:260px;
+  border:3px solid #fff;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  user-select:none;
+}
+.circle span{display:block}
+#mainTime{font-size:48px;font-weight:600}
+#breakTimeDisplay{font-size:20px;color:var(--muted);margin-top:8px}
+
+/* Botões */
+.buttons{display:flex;gap:16px}
+button{
+  padding:10px 20px;
+  border-radius:8px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  background:#444;
+  color:#fff;
+  transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+#startBtn{background:#fff;color:#000}
+#stopBtn{background:#555;color:#fff}
+
+/* Hover para os botões */
+button:hover{
+  transform: translateY(-3px) scale(1.03);
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 6px 18px rgba(0,255,128,0.12);
+}
+
+/* Modal (simples, estilo da agenda) */
+.modal{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.6);
+}
+.modal.hidden{display:none}
+.modal-content{
+  background:var(--card);
+  padding:18px;
+  border-radius:8px;
+  width:320px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.6);
+}
+.modal-content h2{margin:0 0 12px;font-size:18px}
+.linha{margin-bottom:12px}
+label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+input[type="time"]{
+  width:100%;
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #333;
+  background:#000;
+  color:#fff;
+  font-size:16px;
+}
+input[type="time"]:focus{outline:2px solid var(--accent)}
+
+@media (max-width:420px){.modal-content{width:90%}}
+
+ .sidebar {
+    width: 120px;
+    background: #000;
+    height: 100vh;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    }
+
+    .sidebar-link {
+        text-decoration: none;
+    }
+
+    .sidebar-icon {
+        width: 70px;
+        height: 70px;
+        margin: 30px 0;
+        border-radius: 14px;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    /* Hover */
+    .sidebar-icon:hover {
+        transform: scale(1.10);
+        box-shadow: 0 0 18px rgba(0, 255, 128, 0.45);
+    }
+
+    /* Clique */
+    .sidebar-icon:active {
+        transform: scale(0.95);
+    }
+
+    
+    
+
+    
+/* Barra circular de progresso */
+.circle {
+    position: relative;
+    overflow: visible;
+}
+
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.progress-bg {
+    fill: none;
+    stroke: #222;
+    stroke-width: 10;
+}
+
+.progress-bar {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 754; /* perímetro do círculo */
+    stroke-dashoffset: 754;
+    transition: stroke-dashoffset 1s linear;
+}
+
+/* Mantém toda a estrutura centralizada */
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* centraliza HORIZONTALMENTE todos os elementos */
+    justify-content: center; /* opcional */
+    gap: 20px;
+}
+
+/* Somente o input de ciclos — centralização individual */
+.cycle-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centraliza apenas este bloco */
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.cycle-box label {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Campo numérico */
+#cycleCount {
+    width: 90px;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    outline: none;
+    border: 2px solid #333;
+    background: #000;
+    color: #fff;
+    transition: 0.25s ease;
+}
+
+/* Hover */
+#cycleCount:hover {
+    border-color: var(--accent);
+    background: #0a0a0a;
+}
+
+/* Foco */
+#cycleCount:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.35);
+}
