@@ -2,7 +2,7 @@
     <div class="sidebar">
 
         <!-- Agenda -->
-        <a href="{{ route('index') }}" class="sidebar-link">
+        <a href="{{ route('agenda') }}" class="sidebar-link">
             <div class="sidebar-icon {{ request()->routeIs('agenda') ? 'active' : '' }}"
                 style="background-image: url('https://img.icons8.com/fluency/100/calendar.png');">
             </div>
@@ -15,7 +15,7 @@
             </div>
         </a>
 
-        <!-- Estudos (NOVO) -->
+       
         
     </div>
 </div>

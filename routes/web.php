@@ -6,9 +6,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', function(){
-    return view('index');
-})->name('index');
+Route::get('/agenda', function(){
+    return view('agenda');
+})->name('agenda');
 Route::get('/pomodoro', function(){
     return view('pomodoro');
 })->name('pomodoro');
